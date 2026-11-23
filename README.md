@@ -33,7 +33,7 @@ Der Betreiber hat noch keine endgültigen Firmendaten. Deshalb ist die Website a
 2. Echte Kontaktdaten, vollständiges Impressum und passende Datenschutzerklärung ergänzen.
 3. Falls gewünscht: einen echten Anfrageversand einrichten. Erst danach die entsprechenden Texte und Schaltflächen anpassen.
 4. Die `noindex, nofollow`-Einstellung in `dist/index.html` erst zum offiziellen Start entfernen.
-5. Private Vorschau prüfen und bei Bedarf ausdrücklich für die Öffentlichkeit freigeben.
+5. Die veröffentlichte Website unter der GitHub-Pages-Adresse prüfen.
 
 ## Dateien ändern
 
@@ -43,14 +43,25 @@ Der Betreiber hat noch keine endgültigen Firmendaten. Deshalb ist die Website a
 | `dist/styles.css` | Gestaltung und responsive Ansichten |
 | `dist/app.js` | Menü, Planer und ergänzende Hinweise |
 | `dist/assets/` | Lokale Bilder, Schrift und Favicon |
-| `.openai/hosting.json` | Site-ID und statisches Ausgabeverzeichnis |
+| `.github/workflows/pages.yml` | Automatische Veröffentlichung auf GitHub Pages |
+| `.openai/hosting.json` | Konfiguration der früheren privaten Sites-Vorschau |
 | `scripts/serve.mjs` | Lokaler Vorschau-Server |
 
 ## Git und Hosting
 
-Der Quellstand wird mit Git versioniert und mit dem zugehörigen Sites-Quellrepository synchronisiert. `origin` verweist auf dieses Repository. Der Hauptzweig heißt `main`. Das Sites-Quellrepository ist ein Git-Repository, kein GitHub-Repository.
+Der Quellcode liegt auf [GitHub unter mutterstefan-maker/reinigung-werner](https://github.com/mutterstefan-maker/reinigung-werner). Der Remote `github` verweist auf dieses Repository und ist das Push-Ziel für `main`. Der Remote `origin` verweist noch auf das Quellrepository der früheren privaten Sites-Vorschau.
 
-Sites veröffentlicht den gespeicherten Stand zunächst privat. Für spätere Pushes benötigt das verwaltete Quellrepository gegebenenfalls eine frische, kurzlebige Sites-Zugangsberechtigung. Zugangstoken gehören weder in Dateien noch in Remote-URLs. Ein eigener GitHub-Remote kann später zusätzlich eingerichtet werden.
+Die Website wird mit **GitHub Pages** ausgeliefert. Nach erfolgreicher Veröffentlichung ist sie unter [mutterstefan-maker.github.io/reinigung-werner/](https://mutterstefan-maker.github.io/reinigung-werner/) erreichbar.
+
+Jeder Push auf `main` startet den Workflow `.github/workflows/pages.yml`. Er prüft das JavaScript und veröffentlicht den Ordner `dist/`. Die relativen Bild-, Schrift-, CSS- und JavaScript-Pfade funktionieren auch unter dem Projektpfad `/reinigung-werner/`.
+
+```powershell
+git add .
+git commit -m "Update website"
+git push github main
+```
+
+In den Repository-Einstellungen muss unter **Pages → Build and deployment → Source** die Option **GitHub Actions** aktiviert sein. Workflow-Ausführungen sind im Tab **Actions** sichtbar. Zugangstoken gehören weder in Dateien noch in Remote-URLs.
 
 ## Medien
 

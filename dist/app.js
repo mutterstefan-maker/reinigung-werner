@@ -126,7 +126,7 @@ const information = {
   },
   datenschutz: {
     title: 'Hinweise zu diesem Entwurf',
-    html: '<p class="info-notice">Die vollständige Datenschutzerklärung wird ergänzt, sobald Betreiber und endgültige technische Einrichtung feststehen.</p><h3>Reinigungsplaner</h3><p>Ihre Angaben werden in dieser Seite im Arbeitsspeicher des Browsers verarbeitet. Der Planer sendet keine Formulardaten an die Reinigungsfirma. Die Textdatei wird auf Ihrem Gerät erstellt. Die Anwendung speichert Ihre Angaben nicht dauerhaft.</p><h3>Technische Einbindung</h3><p>Fotos und Schrift werden mit der Website ausgeliefert. Dieser Entwurf enthält keine Analyse-, Werbe- oder Tracking-Skripte und setzt selbst keine Cookies. Der Hostinganbieter kann beim Aufruf technische Zugriffsdaten verarbeiten; bei der gehosteten privaten Vorschau kann zudem eine Anmeldung erforderlich sein.</p>'
+    html: '<p class="info-notice">Die vollständige Datenschutzerklärung wird ergänzt, sobald Betreiber und endgültige technische Einrichtung feststehen.</p><h3>Reinigungsplaner</h3><p>Ihre Angaben werden in dieser Seite im Arbeitsspeicher des Browsers verarbeitet. Der Planer sendet keine Formulardaten an die Reinigungsfirma. Die Textdatei wird auf Ihrem Gerät erstellt. Die Anwendung speichert Ihre Angaben nicht dauerhaft.</p><h3>Technische Einbindung</h3><p>Fotos und Schrift werden mit der Website ausgeliefert. Dieser Entwurf enthält keine Analyse-, Werbe- oder Tracking-Skripte und setzt selbst keine Cookies. Der Hostinganbieter kann beim Aufruf technische Zugriffsdaten verarbeiten.</p>'
   },
   bildnachweise: {
     title: 'Bildnachweise',
